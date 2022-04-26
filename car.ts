@@ -26,7 +26,7 @@ class Car {
                 brand: Brand,
                 model: string,
                 color: Color | string,
-                maxSpeed: number = 160) {
+                maxSpeed: number) {
         this.carNumber = carNumber;
         this.brand = brand;
         this.model = model;
@@ -58,8 +58,8 @@ class RaceCar extends Car{
 }
 
 
-const firstCar = new RaceCar('AA 1234', Brand.BMW, 'A6', Color.yellow);
+const firstCar = new RaceCar('AA 1234', Brand.BMW, 'A6',  Color.yellow, 160);
 
-firstCar.move(160);
+firstCar.move(162);
 firstCar.repaint(Color.red);
 firstCar.displayInfo();
